@@ -1,0 +1,63 @@
+#container{
+    display:flex;
+    flex-wrap: wrap;
+    flex: 1;
+    height:100vh;
+    width: 100vh;
+    margin : 0;
+    float:right;
+}
+body {
+    margin: 0;
+}
+.sketch:hover {
+    background-color:yellow;
+}
+.sketch {
+    height: 6.25%;
+    width: 6.25vh;
+    background-color:white;
+}
+h1 {
+    text-align:center;
+    font-size:128px;
+    margin:0;
+    width:50vw;
+}
+.rainbow-text{
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 33%, rgba(0,0,255,1) 66%, rgba(255,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:rainbow_anim 6s ease-in-out infinite;
+    background-size: 700% 100%;
+    font-family: 'Style Script', cursive;
+}
+html {
+    background-color:black;
+}
+@keyframes rainbow_anim {
+    0%,100%{background-position: 0 0;}
+    50%{background-position:100% 0}
+}
+#settings{
+    width:35vw;
+    height:75vh;
+    background:linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 33%, rgba(0,0,255,1) 66%, rgba(255,0,0,1) 100%);
+    margin:auto;
+    border-radius:50px;
+    padding:1vh;
+}
+#settings-container{
+    width:50vw;
+    height:100vh;
+    margin:0px;
+}
+#settings-inside{
+    width: 33vw;
+    height:73vh;
+    margin:auto;
+    display:absolute;
+    top:30vh;
+    background-color:rgba(85,85,85,0.90);
+    border-radius:50px;
+}
