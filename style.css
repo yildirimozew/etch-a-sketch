@@ -7,23 +7,28 @@
     margin : 0;
     float:right;
 }
+
 body {
     margin: 0;
 }
+
 .sketch:hover {
     background-color:yellow;
 }
+
 .sketch {
     height: 6.25%;
     width: 6.25vh;
     background-color:white;
 }
+
 h1 {
     text-align:center;
     font-size:128px;
     margin:0;
     width:50vw;
 }
+
 .rainbow-text{
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 33%, rgba(0,0,255,1) 66%, rgba(255,0,0,1) 100%);
     -webkit-background-clip: text;
@@ -31,14 +36,18 @@ h1 {
     animation:rainbow_anim 6s ease-in-out infinite;
     background-size: 700% 100%;
     font-family: 'Style Script', cursive;
+    height:18vh;
 }
+
 html {
     background-color:black;
 }
+
 @keyframes rainbow_anim {
     0%,100%{background-position: 0 0;}
     50%{background-position:100% 0}
 }
+
 #settings{
     width:35vw;
     height:75vh;
@@ -47,17 +56,105 @@ html {
     border-radius:50px;
     padding:1vh;
 }
+
 #settings-container{
     width:50vw;
     height:100vh;
     margin:0px;
 }
+
 #settings-inside{
-    width: 33vw;
-    height:73vh;
+    width: 34vw;
+    height:74.5vh;
     margin:auto;
     display:absolute;
     top:30vh;
     background-color:rgba(85,85,85,0.90);
     border-radius:50px;
 }
+
+#actual-settings{
+    display:flex;
+    flex-wrap:wrap;
+    width:32vw;
+    height:72vh;
+    margin:auto;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#rgb-picker{
+    height:10vh;
+    width:10vh;
+    border-radius:30px;
+    background-color:black;
+    margin-left: 13vw;
+    margin-right:13vw;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+input[type="color"]::-webkit-color-swatch {
+    border: none;border-radius:30px;
+  }
+
+#rainbow-picker{
+    width:10vh;
+    height:10vh;
+    border: 1px solid black;
+    background:linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,255,0,1) 33%, rgba(0,0,255,1) 66%, rgba(255,0,0,1) 100%);
+    border-radius:30px;
+    background-size: 700% 100%;
+    animation:rainbow_anim 10s ease-in-out infinite;
+    margin-left: 13vw;
+    margin-right:13vw;
+}
+
+#clear{
+    width:6vw;
+    margin-left: 13vw;
+    margin-right:13vw;
+}
+
+#desc2{
+    margin:2vh 2vh 1vh 2vh;
+    font-family: 'Style Script', cursive;
+    font-size:30px;
+}
+
+#desc3{
+    margin:1vh 2vh 1vh 2vh;
+    font-family: 'Style Script', cursive;
+    font-size:30px;
+}
+
+#squareNum {
+    margin-left: 10vw;
+    margin-right:10vw;
+}
+
+#desc1{
+    margin:2vh;
+    font-family: 'Style Script', cursive;
+    font-size:30px;
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: linear-gradient(90deg, #52307c, #7c5295); /* Otherwise white in Chrome */
+    border: 3px solid black;
+    border-radius:15px;
+    width:10vw;
+    height:3vh;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width:10px;
+    height:45px;
+    background:linear-gradient(135deg, #5dc434, rgb(162, 177, 27));
+    border-radius:50px;
+  }

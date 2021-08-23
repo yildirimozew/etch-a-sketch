@@ -3,11 +3,11 @@
     <head>
         <title>Etch-a-sketch</title>
         <meta charset="utf-8">
-        <script src="javascript.js" defer></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+<script src="javascript.js" defer></script>
     </head>
     <body>
         <div id="container">
@@ -15,7 +15,18 @@
         <div id="settings-container">
         <h1 class="rainbow-text">Etch a Sketch</h1>
         <div id="settings">
-            <div id="settings-inside"></div>
+            <div id="settings-inside">
+                <div id="actual-settings">
+                    <p id="desc1">Color picker</p>
+                    <input type="color" id="rgb-picker" name="selectedColor" value="#000000" onchange="colorChange()">
+                    <p id="desc1">Rainbow</p>
+                    <div id="rainbow-picker" onclick="rainbowize()"></div>
+                    <p id="desc2">Clear</p>
+                    <img id="clear" src="eraser-2.png" onclick="drawCanvas()"></img>
+                    <p id="desc3">Square amount</p>
+                    <input type="range" id="squareNum" name="squareNum" min="16" max="100" onchange="drawCanvas()">
+                </div>
+            </div>
         </div>
         </div>
     </body>
