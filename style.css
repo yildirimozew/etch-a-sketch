@@ -158,3 +158,11 @@ input[type=range] {
     background:linear-gradient(135deg, #5dc434, rgb(162, 177, 27));
     border-radius:50px;
   }
+
+#github-link{
+    height:40px;
+    float:right;
+    position:relative;
+    bottom:4vh;
+    right:1vw;
+}
